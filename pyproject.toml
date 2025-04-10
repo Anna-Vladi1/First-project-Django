@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "first-project-django"
+version = "0.1.0"
+description = ""
+authors = ["Vladimirova Anna <niura.vladimirova@yandex.ru>"]
+readme = "README.md"
+packages = [
+    { include = "first_project_django", from = "src" },
+    { include = "rooms_app", from = "src" }
+]
+
+
+[tool.poetry.dependencies]
+django = ">=5.2,<6.0"
+psycopg2-binary = ">=2.9.10,<3.0.0"
+python = "^3.12"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.11.4"
+pre-commit = "^4.2.0"
+pytest = "^8.3.5"
+pytest-django = "^4.11.1"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
